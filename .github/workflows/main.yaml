@@ -11,8 +11,7 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
-        env:
-          CI: ""        
+           
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -20,5 +19,4 @@ jobs:
         with:
           build: npm run build
           start: npm start
-        env:
-          CI: ""
+          env: CI=""
